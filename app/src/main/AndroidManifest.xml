@@ -34,7 +34,9 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PicListActivity">
+        <activity android:name=".VideoActivity"
+            android:supportsPictureInPicture="true"
+            android:resizeableActivity="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
