@@ -9,9 +9,6 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
-
-
     }
     buildTypes {
         release {
@@ -38,4 +35,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.1.0'
     compile 'org.jsoup:jsoup:1.10.2'
     compile 'com.alipay.euler:andfix:0.3.1@aar'
+    compile files('libs/aplayer.jar')
 }

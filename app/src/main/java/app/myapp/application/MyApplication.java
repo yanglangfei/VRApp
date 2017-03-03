@@ -1,10 +1,6 @@
 package app.myapp.application;
 
 import android.app.Application;
-import android.content.pm.PackageManager;
-import android.widget.SlidingDrawer;
-
-import com.alipay.euler.andfix.patch.PatchManager;
 
 import org.xutils.x;
 

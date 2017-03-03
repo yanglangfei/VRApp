@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     public void videoConfig(){
         VideoConfiguration.Builder builder=new VideoConfiguration.Builder();
         builder.setSize(640,300)
