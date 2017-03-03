@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_welcom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.myapp.WelcomActivity">
+
+    <com.google.vr.sdk.widgets.pano.VrPanoramaView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/vrView"
+        android:scrollbars="none"
+        ></com.google.vr.sdk.widgets.pano.VrPanoramaView>
+
+      <com.google.vr.sdk.widgets.video.VrVideoView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:id="@+id/vrVideo"
+          android:visibility="gone"
+          ></com.google.vr.sdk.widgets.video.VrVideoView>
+</RelativeLayout>
