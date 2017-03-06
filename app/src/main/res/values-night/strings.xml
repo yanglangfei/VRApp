@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">夜间</string>
+    <string name="day_night_label">夜间模式</string>
+</resources>

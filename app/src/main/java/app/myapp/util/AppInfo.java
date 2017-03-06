@@ -1,12 +1,9 @@
 package app.myapp.util;
-
 import android.app.ActivityManager;
 import android.content.Context;
-import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
-
 import java.util.List;
 
 /**
@@ -31,6 +28,12 @@ public class AppInfo {
     }
 
 
+    /**
+     * @param context
+     * @return
+     * @throws PackageManager.NameNotFoundException
+     * @deprecated   获取所有安装的应用程序
+     */
     public  List<PackageInfo>   getInstallPackage(Context context) throws PackageManager.NameNotFoundException {
         PackageManager pm=context.getPackageManager();
         List<PackageInfo> installedApplications = pm.getInstalledPackages(0);
@@ -38,6 +41,12 @@ public class AppInfo {
             Drawable applicationIcon = pm.getApplicationIcon(installedApplication.packageName);
             Drawable applicationLogo = pm.getApplicationLogo(installedApplication.packageName);
             CharSequence applicationLabel = pm.getApplicationLabel(installedApplication.applicationInfo);
+            int flags = installedApplication.applicationInfo.flags;
+            if(flags>=0){
+                //  系统应用
+            }else{
+                //
+            }
         }
         return   installedApplications;
     }

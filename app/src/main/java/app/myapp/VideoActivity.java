@@ -5,11 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.view.View;
 import android.widget.Toast;
-
 import com.aplayer.aplayerandroid.APlayerAndroid;
-
 import app.myapp.util.Constant;
 import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
 import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
@@ -22,7 +19,7 @@ import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
 public class VideoActivity extends AppCompatActivity implements SurfaceHolder.Callback {
     private JCVideoPlayerStandard jv;
     private SurfaceView sv;
-    private APlayerAndroid     aplyer;
+    private APlayerAndroid    aplyer;
     private SurfaceHolder holder;
 
     @Override
@@ -48,7 +45,6 @@ public class VideoActivity extends AppCompatActivity implements SurfaceHolder.Ca
                 Toast.makeText(VideoActivity.this, "打开成功", Toast.LENGTH_SHORT).show();
             }
         });
-
 
         holder = sv.getHolder();
         holder.addCallback(this);

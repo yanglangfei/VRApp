@@ -48,52 +48,8 @@ public class PicListActivity extends BaseActivity {
             bitmaps.add(bm);
         }
         picAdapter.notifyDataSetChanged();
-
-       /* NetUtil util=new NetUtil();
-        util.setOnHttpResult(new NetUtil.OnHttpResult() {
-            @Override
-            public void onSuccess(String result) {
-                Toast.makeText(PicListActivity.this, ""+result, Toast.LENGTH_SHORT).show();
-                Log.i(TAG,result);
-
-            }
-
-            @Override
-            public void onError(Throwable ex) {
-                Toast.makeText(PicListActivity.this, "error", Toast.LENGTH_SHORT).show();
-                Log.i(TAG,"error");
-            }
-
-            @Override
-            public void onCancell(Callback.CancelledException ex) {
-                Toast.makeText(PicListActivity.this, "cancel", Toast.LENGTH_SHORT).show();
-                Log.i(TAG,"cancel");
-            }
-
-            @Override
-            public void onFinish() {
-
-            }
-
-            @Override
-            public void onCache(String result) {
-                Toast.makeText(PicListActivity.this, "cache", Toast.LENGTH_SHORT).show();
-                Log.i(TAG,"cache");
-            }
-
-            @Override
-            public void onNetFail() {
-
-            }
-        });
-        RequestParams param=new RequestParams("https://tiequan.applinzi.com/");
-        util.sendGet(param,this);*/
     }
     
-    public void onToast(View view){
-        Toast.makeText(this, "hello,I am a bug", Toast.LENGTH_SHORT).show();
-    }
-
     private void initView() {
         rv= (RecyclerView) findViewById(R.id.rv);
         GridLayoutManager lm=new GridLayoutManager(this,3);

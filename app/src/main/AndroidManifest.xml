@@ -34,7 +34,7 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VideoActivity"
+        <activity android:name=".ParseVideoView"
             android:supportsPictureInPicture="true"
             android:resizeableActivity="true"
             android:screenOrientation="sensorPortrait">

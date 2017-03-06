@@ -25,6 +25,7 @@ public class WelcomActivity extends AppCompatActivity {
     private  LoadPanoramaImageTask mLoadPanoramaImageTask;
     private VrVideoView vrVideo;
     private  String index;
+    private static final String TAG = "WelcomActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,36 +65,36 @@ public class WelcomActivity extends AppCompatActivity {
             @Override
             public void onCompletion() {
                 super.onCompletion();
-                Log.i("111","complete");
+                Log.i(TAG,"complete");
             }
 
             @Override
             public void onNewFrame() {
                 super.onNewFrame();
-                Log.i("111","next frame");
+                Log.i(TAG,"next frame");
             }
 
             @Override
             public void onLoadSuccess() {
                 super.onLoadSuccess();
-                Log.i("111","success");
+                Log.i(TAG,"success");
             }
 
             @Override
             public void onLoadError(String errorMessage) {
-                Log.i("111","载入失败："+errorMessage);
+                Log.i(TAG,"载入失败："+errorMessage);
             }
 
             @Override
             public void onClick() {
                 super.onClick();
-                Log.i("111","click");
+                Log.i(TAG,"click");
             }
 
             @Override
             public void onDisplayModeChanged(int newDisplayMode) {
                 super.onDisplayModeChanged(newDisplayMode);
-                Log.i("111","model change");
+                Log.i(TAG,"model change");
             }
         });
 
@@ -151,10 +152,7 @@ public class WelcomActivity extends AppCompatActivity {
             options.inputType = VrPanoramaView.Options.TYPE_MONO;
             vrView.loadImageFromBitmap(bitmap, options);
 
-
-
-
-            /*try {
+            try {
                 VrVideoView.Options options1=new VrVideoView.Options();
                 options1.inputType=VrVideoView.Options.TYPE_MONO;
                 vrVideo.loadVideoFromAsset("file.mp4",options1);
@@ -162,8 +160,7 @@ public class WelcomActivity extends AppCompatActivity {
                 vrVideo.playVideo();
             } catch (IOException e) {
                 e.printStackTrace();
-                Log.i("111","error:"+e.getMessage());
-            }*/
+            }
 
         }
     }
